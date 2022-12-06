@@ -11,11 +11,15 @@ python = "^3.7"
 fastapi = "^0.82.0"
 uvicorn = "^0.18.3"
 python-dotenv = "^0.21.0"
+alembic = "^1.8.1"
+sqlalchemy = "^1.4.44"
+pymysql = "^1.0.2"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"
 isort = "^5.10.1"
 mypy = "^0.991"
+black = {version = "^22.10.0", allow-prereleases = true}
 
 [tool.isort]
 multi_line_output = 3

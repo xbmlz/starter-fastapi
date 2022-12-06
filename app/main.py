@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from app.core.config import settings 
 
-app = FastAPI()
+from app.api.v1.router import routes
+from app.core.config import settings
 
-print(settings.SERVER_HOST)
+app = FastAPI(
+    title=settings.APP_NAME,
+    openapi_url=f"{settings.SERVER_CONTEXT_PATH}/openapi.json",
+)
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app.include_router(routes, prefix=settings.SERVER_CONTEXT_PATH)

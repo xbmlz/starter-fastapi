@@ -6,7 +6,7 @@
 
 - 📦 [Poetry](https://python-poetry.org/) - manage your dependencies
 
-- 🛡 [Flake8](https://flake8.pycqa.org/en/latest/) - linting
+- 🛡 [Flake8](https://flake8.pycqa.org/en/latest/), [Black](https://black.readthedocs.io/en/stable/), [isort](https://pycqa.github.io/isort/) - code formatting
 
 - 🐳 [Docker](https://www.docker.com/) - containerize your app
 
