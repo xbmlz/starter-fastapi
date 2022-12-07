@@ -6,7 +6,6 @@ from pydantic import BaseModel
 # Shared properties
 class SysUserBase(BaseModel):
     username: Optional[str] = None
-    password: Optional[str] = None
     is_active: Optional[bool] = True
     is_superuser: Optional[bool] = False
 
@@ -36,4 +35,4 @@ class SysUser(SysUserInDBBase):
 
 # Additional properties stored in DB
 class SysUserInDB(SysUserInDBBase):
-    hashed_password: str
+    password: str
